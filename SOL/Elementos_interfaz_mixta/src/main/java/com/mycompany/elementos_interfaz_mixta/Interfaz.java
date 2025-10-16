@@ -26,6 +26,7 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
@@ -60,9 +61,11 @@ public class Interfaz extends javax.swing.JFrame {
         jCheckBox9 = new javax.swing.JCheckBox();
         jTextField6 = new javax.swing.JTextField();
         jSpinner3 = new javax.swing.JSpinner();
+        jSeparator2 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Opcion 1");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,8 +73,10 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Opcion 2");
 
+        buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("Opcion 3");
 
         jCheckBox1.setText("Opcion 4");
@@ -109,15 +114,24 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        jSlider3.setEnabled(false);
+
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setEnabled(false);
 
         jLabel5.setText("Correo");
+        jLabel5.setEnabled(false);
 
         jLabel6.setText("Contraseña");
+        jLabel6.setEnabled(false);
+
+        jTextField5.setEnabled(false);
 
         jPasswordField3.setText("jPasswordField1");
+        jPasswordField3.setEnabled(false);
 
         jButton7.setText("Aceptar");
+        jButton7.setEnabled(false);
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -125,8 +139,10 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         jButton8.setText("Redondo");
+        jButton8.setEnabled(false);
 
         jButton9.setText("?");
+        jButton9.setEnabled(false);
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -134,6 +150,7 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         jRadioButton7.setText("Opcion 1");
+        jRadioButton7.setEnabled(false);
         jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton7ActionPerformed(evt);
@@ -141,10 +158,13 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         jRadioButton8.setText("Opcion 2");
+        jRadioButton8.setEnabled(false);
 
         jRadioButton9.setText("Opcion 3");
+        jRadioButton9.setEnabled(false);
 
         jCheckBox7.setText("Opcion 4");
+        jCheckBox7.setEnabled(false);
         jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox7ActionPerformed(evt);
@@ -152,8 +172,14 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         jCheckBox8.setText("Opcion 5");
+        jCheckBox8.setEnabled(false);
 
         jCheckBox9.setText("Opcion 6");
+        jCheckBox9.setEnabled(false);
+
+        jTextField6.setEnabled(false);
+
+        jSpinner3.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -240,6 +266,9 @@ public class Interfaz extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(18, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jSeparator2)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,7 +304,9 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jRadioButton7)
@@ -320,7 +351,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
+        jRadioButton7.setSelected(jRadioButton1.isSelected());
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -379,6 +410,7 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -405,6 +437,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSlider jSlider3;
     private javax.swing.JSpinner jSpinner1;
