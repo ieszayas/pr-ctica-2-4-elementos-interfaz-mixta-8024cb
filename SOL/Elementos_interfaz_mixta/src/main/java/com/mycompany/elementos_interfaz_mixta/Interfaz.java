@@ -5,6 +5,9 @@
 package com.mycompany.elementos_interfaz_mixta;
 
 import com.formdev.flatlaf.FlatClientProperties;
+import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -170,6 +173,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jButton2.putClientProperty(FlatClientProperties.BUTTON_TYPE, FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
 
         jButton3.setText("?");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -203,6 +207,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jButton8.setText("Redondo");
         jButton8.setEnabled(false);
+        jButton8.putClientProperty(FlatClientProperties.BUTTON_TYPE, FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
 
         jButton9.setText("?");
         jButton9.setEnabled(false);
@@ -489,8 +494,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jButton2.putClientProperty(FlatClientProperties.BUTTON_TYPE, FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
-        jButton8.putClientProperty(FlatClientProperties.BUTTON_TYPE, FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -502,21 +506,11 @@ public class Interfaz extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+         /* Set the Nimbus look and feel */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
         }
         //</editor-fold>
 
