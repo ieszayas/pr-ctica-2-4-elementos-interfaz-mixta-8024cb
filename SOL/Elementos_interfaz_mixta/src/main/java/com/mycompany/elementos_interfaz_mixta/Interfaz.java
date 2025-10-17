@@ -126,6 +126,12 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider1StateChanged(evt);
+            }
+        });
+
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +143,17 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel2.setText("Contraseña");
 
-        jPasswordField1.setText("jPasswordField1");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Aceptar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -168,7 +184,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         jTextField5.setEnabled(false);
 
-        jPasswordField3.setText("jPasswordField1");
         jPasswordField3.setEnabled(false);
 
         jButton7.setText("Aceptar");
@@ -455,6 +470,18 @@ public class Interfaz extends javax.swing.JFrame {
         who=sb.reverse().toString();
         jTextField6.setText(who);
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        jTextField5.setText(jTextField2.getText());
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        jPasswordField3.setText(jPasswordField1.getText());
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
+        jSlider3.setValue(jSlider1.getValue());
+    }//GEN-LAST:event_jSlider1StateChanged
 
     /**
      * @param args the command line arguments
