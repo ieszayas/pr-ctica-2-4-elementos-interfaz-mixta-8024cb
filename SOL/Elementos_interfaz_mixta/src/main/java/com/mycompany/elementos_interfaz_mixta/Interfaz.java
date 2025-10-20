@@ -133,6 +133,11 @@ public class Interfaz extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
 
         jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -160,6 +165,11 @@ public class Interfaz extends javax.swing.JFrame {
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
+            }
+        });
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField2KeyReleased(evt);
             }
         });
 
@@ -578,25 +588,11 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner1StateChanged
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        String who = jTextField1.getText();
-        StringBuilder sb = new StringBuilder(who);
-        who = sb.reverse().toString();
-        jTextField4.setText(who);
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        jTextField3.setText(jTextField2.getText());
-        if (jTextField2.getText().contains("@gmail.com") || jTextField2.getText().contains("@educa.madrid.org")) {
-            jInternalFrame1.setTitle("Correo confirmado");
-            jTextField2.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-            jCheckBox7.setSelected(true);
-            jCheckBox8.setSelected(true);
-        } else {
-            jTextField2.setBorder(BorderFactory.createLineBorder(Color.RED));
-            jCheckBox7.setSelected(false);
-            jCheckBox8.setSelected(false);
-            jInternalFrame1.setTitle("Correo Incorrecto");
-        }
+
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
@@ -654,6 +650,28 @@ public class Interfaz extends javax.swing.JFrame {
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox8ActionPerformed
+
+    private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
+        jTextField3.setText(jTextField2.getText());
+        if (jTextField2.getText().contains("@gmail.com") || jTextField2.getText().contains("@educa.madrid.org")) {
+            jInternalFrame1.setTitle("Correo confirmado");
+            jTextField2.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+            jCheckBox7.setSelected(true);
+            jCheckBox8.setSelected(true);
+        } else {
+            jTextField2.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jCheckBox7.setSelected(false);
+            jCheckBox8.setSelected(false);
+            jInternalFrame1.setTitle("Correo Incorrecto");
+        }
+    }//GEN-LAST:event_jTextField2KeyReleased
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        String who = jTextField1.getText();
+        StringBuilder sb = new StringBuilder(who);
+        who = sb.reverse().toString();
+        jTextField4.setText(who);        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1KeyReleased
 
     /**
      * @param args the command line arguments
